@@ -15,7 +15,7 @@ def on_connect(mosq, obj, rc):
 
 def on_disconnect(client, userdata, rc):
 	logging.warning("Disconnected (RC " + str(rc) + ")")
-	if rc <> 0:
+	if rc != 0:
 		try_reconnect(client)
 
 def on_log(client, userdata, level, buf):
